@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="number" id="number1" value="0">
+<input type="number" id="number2" value="0">
+<button type="button" onclick="total()">Total</button>
+<script>
+function total() {
+    let a=parseFloat(document.getElementById("number1").value);
+    let b=parseFloat(document.getElementById("number2").value);
+    if(a>b){
+        alert(a);
+    }else if(a<=b){
+        alert(a+b);
+    }
+}
+</script>
+</body>
+</html>

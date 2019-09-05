@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="name" >
+<button type="button" onclick="findStar()">Search</button>
+<script>
+    function findStar() {
+        let parameter = document.getElementById("name").value;
+        let stars1 = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let stars2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let check = false;
+        let local=0;
+        for (let i = 0; i < stars1.length - 1; i++) {
+            if (stars1[i]===parameter) {
+                check = true;
+                local=i;
+            }
+        }
+        if(check===true) {
+            alert(stars2[local]);
+        }else if(check===false){
+            alert("Không có ngôi sao tương ứng.");
+        }
+    }
+</script>
+</body>
+</html>
